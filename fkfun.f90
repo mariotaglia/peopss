@@ -28,7 +28,6 @@ integer i
 
 xmNAalpha=exp(x(1))        !xmNa en alfa
 xmNAbeta=exp(x(2))        !xmNa en beta
-
 n_totbeta=exp(x(3))    ! total monomer in beta
 ratioEOAbeta=exp(x(4))   !xmpeo/xmA en beta
 
@@ -148,7 +147,7 @@ elib=0.
 call fe(elib)
 free_ener=elib
 
-Penality=1
+Penality=0.0
 Penality=abs(xmNabeta-xmNaalpha)/(xmNabeta*0.5+xmNaalpha*0.5)
 Penality=Penality+abs(n_totalpha-n_totbeta)/(n_totalpha*0.5+n_totbeta*0.5)
 Penality=Penality+abs(ratioEOAalpha-ratioEOAbeta)/(ratioeoaalpha*0.5+ratioeoabeta*0.5)
